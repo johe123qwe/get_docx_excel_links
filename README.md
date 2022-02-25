@@ -1,7 +1,7 @@
 ## 项目功能
 获取odt、ods、docx、xlsx中的超链接。通过**cloudmersive** 
 
-## 部署
+## 部署 
 `pip3 install -r requirements.txt`
 
 `main.py` 为命令行版。
