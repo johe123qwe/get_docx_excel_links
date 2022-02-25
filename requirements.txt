@@ -1,0 +1,7 @@
+cloudmersive-validate-api-client
+cloudmersive_convert_api_client
+Gooey
+bs4==4.9.3
+lxml==4.6.3
+pandas==1.4.1
+unicodecsv==0.14.1
