@@ -13,9 +13,11 @@
 `main_gui.py` 为通过 [Geooey](https://github.com/chriskiehl/Gooey) 生成的桌面版本，通过 `pyinstaller` 打包生成桌面包。
 
 MacOS or Linux
+
 `pyinstaller -w -F main_gui.py`
 
 Windows
+
 [Auto PY to EXE](https://pypi.org/project/auto-py-to-exe/)
 
 
@@ -25,3 +27,5 @@ Windows
 
 ## 特别鸣谢
 [hx-util](https://github.com/Colin-Fredericks/hx-util)
+
+[关于cloudmersive安全文档](https://cloudmersive.com/security)
