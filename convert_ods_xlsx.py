@@ -4,14 +4,17 @@ import cloudmersive_convert_api_client
 from cloudmersive_convert_api_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: Apikey
-configuration = cloudmersive_convert_api_client.Configuration()
-configuration.api_key['Apikey'] = 'YOUR_KEY'
 
-# create an instance of the API class
-api_instance = cloudmersive_convert_api_client.ConvertDocumentApi(cloudmersive_convert_api_client.ApiClient(configuration))
 
-def convent_ods_to_xlsx(input_file, outputfile):
+
+def convent_ods_to_xlsx(input_file, outputfile, KEY):
+
+    # Configure API key authorization: Apikey
+    configuration = cloudmersive_convert_api_client.Configuration()
+    configuration.api_key['Apikey'] = KEY
+    # create an instance of the API class
+    api_instance = cloudmersive_convert_api_client.ConvertDocumentApi(cloudmersive_convert_api_client.ApiClient(configuration))
+
     try:
         # Convert ODS Spreadsheet to XLSX
         api_response = api_instance.convert_document_ods_to_xlsx(input_file)
@@ -23,5 +26,5 @@ def convent_ods_to_xlsx(input_file, outputfile):
         print("Exception when calling ConvertDocumentApi->convert_document_ods_to_xlsx: %s\n" % e)
 
 if __name__ == '__main__':
-    convent_ods_to_xlsx(input_file, outputfile)
+    convent_ods_to_xlsx(input_file, outputfile, KEY)
     
