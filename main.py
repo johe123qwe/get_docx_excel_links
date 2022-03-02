@@ -19,7 +19,6 @@ import convert_ods_xlsx
 import convert_odt_docx
 import shutil
 import os
-import sys
 
 
 '''

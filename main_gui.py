@@ -99,14 +99,14 @@ def delete_tmp_path(args_path):
             }, {
                 'type': 'Link',
                 'menuTitle': 'other tools',
-                'url': 'https://drive.google.com/drive/folders/1DkQI9ASvfULveYEPydMkmbS7U93-OAK4?usp=sharing'
+                'url': 'https://drive.google.com/drive/folders/'
             }]
         },{
         'name': 'Help',
         'items': [{
             'type': 'Link',
             'menuTitle': '小工具链接',
-            'url': 'https://drive.google.com/drive/folders/1DkQI9ASvfULveYEPydMkmbS7U93-OAK4?usp=sharing'
+            'url': 'https://drive.google.com/drive/folders/'
         }]
     }]
 )
