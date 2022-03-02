@@ -85,7 +85,7 @@ def delete_tmp_path(args_path):
 def main():
     parser = argparse.ArgumentParser(description="获取文档超链接小工具")
     parser.add_argument('-d', '--directory', dest='args_path', action='store', required=True, help='路径')
-    parser.add_argument('-k', '--key', dest='KEY', action='store', required=True, help='密钥')
+    parser.add_argument('-k', '--key', dest='KEY', action='store', required=True, help='cloudmersiv_key')
 
     args = parser.parse_args()
     global KEY

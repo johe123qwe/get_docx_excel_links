@@ -114,6 +114,7 @@ def delete_tmp_path(args_path):
 def main():
     parser = GooeyParser(description="获取文档超链接小工具")
     parser.add_argument('-d', '--directory', dest='args_path', metavar='路径', action='store', required=True, widget='DirChooser', help='路径')
+    parser.add_argument('-k', '--key', dest='KEY', metavar='cloudmersiv_key', action='store', required=True, widget='TextField', help='cloudmersiv_key')
 
     args = parser.parse_args()
 
