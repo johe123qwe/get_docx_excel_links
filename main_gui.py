@@ -37,7 +37,7 @@ https://github.com/Cloudmersive/Cloudmersive.APIClient.Python.Validate/blob/mast
 docxs_list = []
 xlsxs_list = []
 
-def get_file(args_path):
+def get_file(args_path, KEY):
     '''获取文件存入列表'''
     for root, dirs, files in os.walk(args_path):
         files = [f for f in files if not f[0] == '.']
@@ -53,7 +53,7 @@ def get_file(args_path):
                     os.makedirs(tmp_path)
                 docx_path = os.path.join(root, eachfile)
                 new_docx = os.path.join(tmp_path, os.path.basename(docx_path) + '.docx')
-                convert_odt_docx.convent_odt_to_docx(docx_path, new_docx)
+                convert_odt_docx.convent_odt_to_docx(docx_path, new_docx, KEY)
                 docxs_list.append(new_docx)
             if eachfile.endswith('.xlsx') and not eachfile.startswith("~$"):
                 xlsx_path = os.path.join(root, eachfile)
@@ -64,7 +64,7 @@ def get_file(args_path):
                     os.makedirs(tmp_path)
                 xlsx_path = os.path.join(root, eachfile)
                 new_xlsx = os.path.join(tmp_path, os.path.basename(xlsx_path) + '.xlsx')
-                convert_ods_xlsx.convent_ods_to_xlsx(xlsx_path, new_xlsx)
+                convert_ods_xlsx.convent_ods_to_xlsx(xlsx_path, new_xlsx, KEY)
                 xlsxs_list.append(new_xlsx)
 
 def delete_tmp_path(args_path):
@@ -117,8 +117,9 @@ def main():
     parser.add_argument('-k', '--key', dest='KEY', metavar='cloudmersiv_key', action='store', required=True, widget='TextField', help='cloudmersiv_key')
 
     args = parser.parse_args()
-
-    get_file(args.args_path)
+    global KEY
+    KEY = args.KEY
+    get_file(args.args_path, KEY)
     if docxs_list != []:
         GetWordLinks.getWordLinks(docxs_list, args.args_path)
     if xlsxs_list != []:
