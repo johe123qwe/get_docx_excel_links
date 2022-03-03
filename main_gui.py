@@ -7,8 +7,9 @@
 # @DESCRIPTION: 获取odt、ods、docx、xlsx中的超链接,采用 Gooey 打包成 GUI 工具。
 # modified by xy 20220216 1.0.0
 # modified by xy 20220225 1.0.1
+# modified by xy 20220303 1.0.1 fix error
 
-version = '1.0.1'
+version = '1.0.2'
 import shutil
 import GetWordLinks
 import GetExcelLinks
