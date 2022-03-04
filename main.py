@@ -28,15 +28,6 @@ pip install bs4
 pip install lxml
 pip install pandas
 pip install unicodecsv
-
-# cloudmersiv API 每月 800 次，
-https://cloudmersive.medium.com/how-to-convert-ods-to-xlsx-in-python-de3ae2930cd1
-https://api.cloudmersive.com/python-client.asp
-https://github.com/Cloudmersive/Cloudmersive.APIClient.Python.Validate/blob/master/demo/demo.py
-
-备用：https://developers.zamzar.com/docs
-
-另一种获取超链接方式：http://webcache.googleusercontent.com/search?q=cache:iawH2oQHZOMJ:www.cppcns.com/jiaoben/python/379590.html&hl=zh-CN&gl=sa&strip=0&vwsrc=0
 '''
 
 docxs_list = []
