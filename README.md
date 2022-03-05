@@ -1,16 +1,15 @@
-## 项目说明
+## Project Description
 
-读取文件夹下的文档和表格，获取odt、ods、docx、xlsx中的超链接。通过 [cloudmersive](https://cloudmersive.com/tools) 进行转换。
-
-## deploy
+Read documents and tables under folders, get hyperlinks in odt, ods, docx, xlsx. Convert by [cloudmersive](https://cloudmersive.com/tools).
+## Deploy
 `pip3 install -r requirements.txt`
 
-### register api
+### Register api
 [cloudmersive api](https://cloudmersive.com/convert-api)
 
-`main.py` 为命令行版。
+`main.py` is the command line version.
 
-`main_gui.py` 为通过 [Geooey](https://github.com/chriskiehl/Gooey) 生成的桌面版本，通过 `pyinstaller` 打包生成桌面包。
+`main_gui.py` is [Geooey](https://github.com/chriskiehl/Gooey) Generated desktop version, generate desktop package by `pyinstaller` package.
 
 MacOS or Linux
 
@@ -20,16 +19,16 @@ Windows
 
 [Auto PY to EXE](https://pypi.org/project/auto-py-to-exe/)
 
-## 使用
+## How to use
 
 `python3 main.py -d /to/path/`
 
-## 特别鸣谢
+## Special Thanks
 [hx-util](https://github.com/Colin-Fredericks/hx-util)
 
-[关于cloudmersive安全文档](https://cloudmersive.com/security)
+[About cloudmersive security documentation](https://cloudmersive.com/security)
 
-cloudmersiv API 每月 800 次，
+cloudmersiv API 800 times a month.
 [convert-ods-to-xlsx](https://cloudmersive.medium.com/how-to-convert-ods-to-xlsx-in-python-de3ae2930cd1
 https://api.cloudmersive.com/python-client.asp)
 
