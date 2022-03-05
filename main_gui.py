@@ -1,15 +1,16 @@
 # -*- coding:UTF-8 -*-
 
 # @AUTHOR: xiaoyu
-# @DATE: 2022/02/25 Fri
-# @TIME: 16:09:00
+# @DATE: 2022/03/05 Sat
+# @TIME: 10:50:00
 #
 # @DESCRIPTION: 获取odt、ods、docx、xlsx中的超链接,采用 Gooey 打包成 GUI 工具。
 # modified by xy 20220216 1.0.0
 # modified by xy 20220225 1.0.1
 # modified by xy 20220303 1.0.2 fix error
+# modified by xy 20220305 1.0.3 修改注释。
 
-version = '1.0.2'
+version = '1.0.3'
 import shutil
 import GetWordLinks
 import GetExcelLinks
@@ -39,7 +40,7 @@ docxs_list = []
 xlsxs_list = []
 
 def get_file(args_path, KEY):
-    '''获取文件存入列表'''
+    '''Get a list of files to deposit'''
     for root, dirs, files in os.walk(args_path):
         files = [f for f in files if not f[0] == '.']
         dirs = [d for d in dirs if not[0] == '.']
@@ -48,7 +49,7 @@ def get_file(args_path, KEY):
                 docx_path = os.path.join(root, eachfile)
                 docxs_list.append(docx_path)
             if eachfile.endswith('.odt') and not eachfile.startswith('~$'):
-                pass # 此处转换为 docx
+                pass # Convert to docx
                 tmp_path = os.path.join(root, '.~$__tmp__')
                 if not os.path.exists(tmp_path):
                     os.makedirs(tmp_path)
@@ -74,7 +75,7 @@ def delete_tmp_path(args_path):
             try:
                 shutil.rmtree(x[0])
             except Exception as e:
-                print('无法删除临时目录')
+                print('Unable to delete temporary directory')
 
 @Gooey(
     program_name='获取文档超链接小工具' + version,
@@ -90,8 +91,8 @@ def delete_tmp_path(args_path):
         'items': [{
                 'type': 'AboutDialog',
                 'menuTitle': 'About',
-                'name': '获取文档超链接小工具',
-                'description': '获取文档超链接小工具',
+                'name': 'Get document hyperlink widget',
+                'description': 'Get document hyperlink widget',
                 'version': '1.0',
                 'copyright': '@2022',
                 'website': 'https://github.com/chriskiehl/Gooey',
@@ -113,7 +114,7 @@ def delete_tmp_path(args_path):
 )
 
 def main():
-    parser = GooeyParser(description="获取文档超链接小工具")
+    parser = GooeyParser(description="Get document hyperlink widget")
     parser.add_argument('-d', '--directory', dest='args_path', metavar='路径', action='store', required=True, widget='DirChooser', help='路径')
     parser.add_argument('-k', '--key', dest='KEY', metavar='cloudmersiv_key', action='store', required=True, widget='TextField', help='cloudmersiv_key')
 
