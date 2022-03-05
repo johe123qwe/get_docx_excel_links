@@ -8,7 +8,7 @@
 # modified by xy 20220216 1.0.0
 # modified by xy 20220225 1.0.1
 # modified by xy 20220303 1.0.2 fix error
-# modified by xy 20220305 1.0.3 修改注释。
+# modified by xy 20220305 1.0.3 Modify comments。
 
 version = '1.0.3'
 import shutil
