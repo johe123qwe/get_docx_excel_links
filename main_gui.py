@@ -9,8 +9,9 @@
 # modified by xy 20220225 1.0.1
 # modified by xy 20220303 1.0.2 fix error
 # modified by xy 20220305 1.0.3 Modify comments。
+# modified by xy 20220306 1.0.4  添加默认 KEY，可不用每次都使用 -k 参数。
 
-version = '1.0.3'
+version = '1.0.4'
 import shutil
 import GetWordLinks
 import GetExcelLinks
@@ -116,7 +117,8 @@ def delete_tmp_path(args_path):
 def main():
     parser = GooeyParser(description="Get document hyperlink widget")
     parser.add_argument('-d', '--directory', dest='args_path', metavar='路径', action='store', required=True, widget='DirChooser', help='路径')
-    parser.add_argument('-k', '--key', dest='KEY', metavar='cloudmersiv_key', action='store', required=True, widget='TextField', help='cloudmersiv_key')
+    parser.add_argument('-k', '--key', dest='KEY', metavar='cloudmersiv_key', action='store', required=False, widget='TextField', default='YOUR_KEY', help='cloudmersiv_key \
+            如果不添加 -k 则使用默认值 KEY。')
 
     args = parser.parse_args()
     global KEY
